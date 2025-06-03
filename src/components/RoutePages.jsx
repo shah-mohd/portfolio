@@ -3,6 +3,10 @@ import About from "./About";
 import Home from "./Home";
 import Projects from "./Porojects";
 import Header from "./Header";
+import Contact from "./Contact";
+import Slider from "./Slider"
+import Slider02 from "./Slider02";
+import Academic from "./Academic";
 
 const RoutePages = ()=> {
     return(
@@ -35,6 +39,14 @@ const appRouter = createBrowserRouter([
     {
         path:'/projects',
         element:<Projects/>
+    },
+    {
+        path:'/contact',
+        element:<Contact/>
+    },
+    {
+        path:'/academic',
+        element:<Academic />
     }
     
 ]);
