@@ -3,7 +3,7 @@ import DarkModeToggle from "./DarkModeToggle"
 
 const Header = () => {
     return (
-        <div className="max-w-full justify-center mx-4 my-4 px-4 py-2 items-center flex sm:justify-between bg-gray-100 text-blue-600 dark:bg-gray-900 dark:text-blue-400 sm:rounded-full">
+        <div className="max-w-full justify-center mx-4 my-4 px-4 py-2 items-center flex sm:justify-between bg-gray-100 text-blue-600 dark:bg-gray-900 dark:text-blue-400 rounded-full">
             <div className="hidden sm:inline-block">
                 <h3 className="font-bold text-3xl cursor-pointer"
                 >SHAH.
