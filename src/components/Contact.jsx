@@ -1,26 +1,42 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
+import checkValidData from "../utils/checkValidDate";
+import emailjs from '@emailjs/browser';
+
+const YOUR_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const YOUR_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const YOUR_SERVICE_ID =  import.meta.env.VITE_EMAILJS_SERVICE_ID;
+
+
 
 const Contact = ()=> {
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [phone, setPhone] = useState("");
-    const [message, setMessage] = useState("");
-
-    console.log(name);
-    console.log(email);
-    console.log(phone);
-    console.log(message);
+    const [errorMessage, setErrorMessage] = useState(null);
+    const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
+    e.preventDefault();
 
-        // new object that contains dynamic template params
-        // const templateParams = {
+    const msg = checkValidData(form.current.user_email.value, form.current.user_name.value);
+    setErrorMessage(msg);
+    if(msg) return;
 
-        // }
-    }
+    emailjs
+      .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, {
+        publicKey: YOUR_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          alert("Your message has been sent. Thank You!");
+            form.current.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
 
 
     return (
@@ -29,56 +45,36 @@ const Contact = ()=> {
                 <Header/>
             </div>
             <div className="bg-gray-100 px-4 py-5 mx-5 my-8 rounded-xl">
-                <form onSubmit={sendEmail}>
+                <form onSubmit={sendEmail} ref={form} className="">
                     <div className="bg-white max-w-md mx-auto my-2 p-10 rounded-xl space-y-4 shadow-lg hover:shadow-2xl">
 
-                        {/* <div> */}
                         <input 
                         type="text" 
                         placeholder="Your Name"
                         className="w-full p-2 border border-gray-300 rounded"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        name="user_name"                        
                          />
-                        {/* </div> */}
 
-                        {/* <div> */}
                         <input 
                         type="email"
                         placeholder="Email"
                         className="w-full p-2 border border-gray-300 rounded"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        name="user_email"
                         />
-                       
-                        {/* </div> */}
 
-                        {/* <div> */}
-                        <input 
-                        type="phone" 
-                        placeholder="Phone"
-                        className="w-full p-2 border border-gray-300 rounded"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        />
-                        {/* </div> */}
-
-                        {/* <div> */}
                         <textarea
                         type="text"
                         placeholder="Message"
                         className="w-full p-2 border border-gray-300 rounded"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        name="message"
                         />
-                        {/* </div> */}
 
-                        {/* <div> */}
-                        <button 
-                        className="w-full bg-gray-100 font-bold text-blue-600 py-2 rounded hover:bg-gray-200 transition">
-                            Submit
-                        </button>
-                        {/* </div> */}
+                        <input 
+                        type="submit" 
+                        value="Send"  
+                        className="w-full bg-gray-100 font-bold text-blue-600 py-2 rounded hover:bg-gray-200 transition cursor-pointer"/>
+                        
+                        <p className="text-red-500 text-sm">{errorMessage}</p>
 
                     </div>
                 </form>

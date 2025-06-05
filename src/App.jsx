@@ -6,7 +6,7 @@ import RoutePages from './components/RoutePages'
 
 function App() {
   return (
-    <div>
+    <div className=''>
       {/* <Header/> */}
       <RoutePages/>
     </div>
