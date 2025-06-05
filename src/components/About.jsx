@@ -58,6 +58,16 @@ const About = ()=> {
                             />
                         </a>
                     </div>
+                    {/* Phone icon */}
+                    <div className="w-6">
+                        <a 
+                        href="tel:+918477866128">
+                            <img 
+                            className="cursor-pointer"
+                            src="./icons/call.png"
+                            />
+                        </a>
+                    </div>
                     {/* Instagram icon */}
                     <div className="w-6">
                         <a
