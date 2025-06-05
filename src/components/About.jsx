@@ -1,20 +1,26 @@
 import Header from "./Header";
 
 const About = ()=> {
+
+    const url = "./shah02.png";
+
     return(
         <div className="">
             <Header/>
             <div className="flex flex-col items-center sm:flex-row bg-gray-100 dark:bg-gray-900 rounded-xl px-4 py-5 mx-5 my-8">
                 <div className="sm:w-5/12 sm:px-24">
+
+                    
                     <img
-                    src="./shah02.png"
+                    src={url}
                     className="sm:h-[400px]"
                     />
+                    
                 </div>
                 <div className="sm:w-7/12">
                 <div className="h-full text-gray-600 dark:text-gray-300">
                     <h1 className="text-lg sm:text-2xl font-bold font-mono"><span className="text-blue-600 dark:text-blue-400">-</span> About Me</h1>
-                    <h2 className="text-xl sm:text-3xl font-bold font-normal m-4">Who is <span className="text-blue-600 dark:text-blue-400">Shah Mohammad Ansari</span></h2>
+                    <h2 className="text-xl sm:text-3xl font-bold m-4">Who is <span className="text-blue-600 dark:text-blue-400">Shah Mohammad Ansari</span></h2>
                     <p>"Hello, I'm SHAH MOHAMMAD ANSARI, currently pursuing MSc. Information Technology at BABASAHEB BHIMRAO AMBEDKAR UNIVERSITY LUCKNOW (U.P.). I'm deeply interested in Web Development, and I enjoy exploring topics like React, Redux, TailwindCSS.
                         I'm always looking to expand my knowledge and take part in meaningful discussions and projects."
                     </p>

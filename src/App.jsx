@@ -1,13 +1,9 @@
-import { useEffect, useState } from 'react';
-import Body from './components/Body'
-import Header from './components/Header'
 import RoutePages from './components/RoutePages'
 
 
 function App() {
   return (
     <div className=''>
-      {/* <Header/> */}
       <RoutePages/>
     </div>
   )

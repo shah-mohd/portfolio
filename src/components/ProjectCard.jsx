@@ -1,4 +1,3 @@
-import DarkModeToggle from "./DarkModeToggle";
 
 const ProjectCard = ({data}) => {
     const {name, description, imageUrl, techUsed} = data;
