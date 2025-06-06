@@ -11,35 +11,35 @@ const Header = () => {
             </div>
 
             <div className="w-full sm:w-6/12 px-6 py-2">
-                <ul className="flex justify-between text-sm sm:text-xl font-semibold">
+                <ul className="flex flex-wrap justify-evenly space-y-2 sm:space-y-0 sm:justify-between text-sm sm:text-xl font-semibold">
 
                     <Link to="/home">
-                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300">
+                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300 border-2 border-gray-400 rounded-sm px-1 mt-2 sm:mt-0 sm:px-0 sm:border-none">
                     Home
                     </li>
                     </Link>
 
                     
                     <Link to="/about">
-                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300">
+                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300 border-2 border-gray-400 rounded-sm px-1 sm:px-0 sm:border-none">
                     About
                     </li>
                     </Link>
 
                     <Link to="/projects">
-                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300">
+                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300 border-2 border-gray-400 rounded-sm px-1 sm:px-0 sm:border-none">
                     Projects
                     </li>
                     </Link>
 
                     <Link to="/academic">
-                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300">
+                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300 border-2 border-gray-400 rounded-sm px-1 sm:px-0 sm:border-none">
                     Academic
                     </li>
                     </Link>
 
                     <Link to="/contact">
-                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300">
+                    <li className="cursor-pointer hover:-translate-y-1 hover:underline transition duration-500 ease-in-out hover:text-blue-700 dark:hover:text-blue-300 border-2 border-gray-400 rounded-sm px-1 sm:px-0 sm:border-none">
                     Contact Me
                     </li>
                     </Link>
