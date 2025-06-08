@@ -44,6 +44,18 @@ const Body = () => {
                             />
                         </a>
                     </div>
+                    {/* Github icon */}
+                    <div className="w-6">
+                        <a 
+                        href="https://github.com/shah-mohd"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                            <img 
+                            className="cursor-pointer"
+                            src="./icons/github.svg"
+                            />
+                        </a>
+                    </div>
                     {/* Gmail icon */}
                     <div className="w-6">
                         <a 

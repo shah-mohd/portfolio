@@ -6,14 +6,19 @@ const Projects = ()=> {
     const projectFoodVilla = {
         name: "Food Villa",
         techUsed: "React, React Router, Redux, TailwindCSS",
-        description: "Its a clone of swiggy with using swiggy API",
+        description: "It's a Swiggy clone web app in this web app using a Swiggy API for showing the restaurant and restaurant menu.",
         imageUrl: "./ProjectImages/foodVilla.png",
+        githubUrl: "https://github.com/shah-mohd/food-villa",
+        projectUrl: null,
     };
 
     const projectWeather = {
         name: "Weather App",
-        description: "Its a weather app",
-        imageUrl: "./ProjectImages/weather02.png"
+        techUsed: "React, TailwindCSS",
+        description: " Displays the weather forecast of any location across the world with the help of openweather API.",
+        imageUrl: "./ProjectImages/weatherDekho.png",
+        githubUrl: "https://github.com/shah-mohd/weather-dekho",
+        projectUrl: "https://weather-dekho-gamma.vercel.app/",
     };
 
     return(
